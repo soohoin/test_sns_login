@@ -7,22 +7,31 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: StreamBuilder(
-        stream: FirebaseAuth.instance.authStateChanges(),
-        builder: (BuildContext context, AsyncSnapshot<User> snapshot) {
-          if (!snapshot.hasData) {
-            return Login();
-          } else {
-            return Center(
-              child: Column(
-                children: [
-                  Text("${snapshot.data.displayName}님 반갑습니다."),
-                ],
-              ),
-            );
-          }
-        },
+    return SafeArea(
+      child: Scaffold(
+        body: StreamBuilder(
+          stream: FirebaseAuth.instance.authStateChanges(),
+          builder: (BuildContext context, AsyncSnapshot<User> snapshot) {
+            if (!snapshot.hasData) {
+              return Login();
+            } else {
+              return Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("${snapshot.data.displayName}님 반갑습니다."),
+                    TextButton(
+                      child: Text("로그아웃"),
+                      onPressed: () {
+                        FirebaseAuth.instance.signOut();
+                      },
+                    ),
+                  ],
+                ),
+              );
+            }
+          },
+        ),
       ),
     );
   }
