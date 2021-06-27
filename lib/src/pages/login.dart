@@ -37,6 +37,10 @@ class Login extends StatelessWidget {
               child: Text("Google Login"),
               onPressed: signInWithGoogle,
             ),
+            TextButton(
+              child: Text("KaKao Login"),
+              onPressed: signInWithGoogle,
+            ),
           ],
         ),
       ),
