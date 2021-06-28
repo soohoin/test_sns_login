@@ -29,8 +29,9 @@ class Login extends StatelessWidget {
     final clientState = Uuid().v4();
     final url = Uri.https('kauth.kakao.com', '/oauth/authorize', {
       'response_type': 'code',
-      'client_id': '5b81115ceee421c3220fe3e669fa3f34',
-      'redirect_uri': 'http://localhost:8080/kakao/sign_in',
+      'client_id': '75be45c34d7befda1bd48e88afe5fe44',
+      // 'redirect_uri': 'http://localhost:8080/kakao/sign_in',
+      'redirect_uri': 'http://192.168.0.6:8080/kakao/sign_in',
       'state': clientState,
     });
 

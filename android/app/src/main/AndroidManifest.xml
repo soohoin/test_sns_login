@@ -1,6 +1,8 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.goalin.snslogin.test_sns_login">
-   <application
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.goalin.snslogin.test_sns_login">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
         android:label="test_sns_login"
         android:icon="@mipmap/ic_launcher">
         <activity
