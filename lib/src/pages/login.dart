@@ -31,8 +31,8 @@ class Login extends StatelessWidget {
       'response_type': 'code',
       'client_id': '75be45c34d7befda1bd48e88afe5fe44',
       // 'redirect_uri': 'http://192.168.158.217:8080/kakao/sign_in',
-      // 'redirect_uri': 'http://192.168.0.6:8080/kakao/sign_in',
-      'redirect_uri': 'http://192.168.26.217:8080/kakao/sign_in',
+      'redirect_uri': 'http://192.168.0.6:8080/kakao/sign_in',
+      // 'redirect_uri': 'http://192.168.26.217:8080/kakao/sign_in',
       'state': clientState,
     });
 
